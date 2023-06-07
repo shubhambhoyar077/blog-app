@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.2.0'
 
-# Rspec for rails
+# Rspec for rails cmd: [bundle install, rails generate rspec:install]
 gem 'rspec-rails'
 
 # Rubocop from microverse linter config.

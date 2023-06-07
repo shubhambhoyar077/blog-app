@@ -3,5 +3,7 @@ class User < ApplicationRecord
   has_many :like, foreign_key: "author_id"
   has_many :comment, foreign_key: "author_id"
 
-  scope :user_top_3_post, ->(user) {user.post.order(created_at: :desc).limit(3)}
+  def top_3_posts
+    post.order(created_at: :desc).limit(3)
+  end
 end

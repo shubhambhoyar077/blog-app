@@ -3,5 +3,11 @@ class Post < ApplicationRecord
   has_many :like
   has_many :comment
 
-  scope :post_top_5_comment, ->(post) {post.comment.order(created_at: :desc).limit(5)}
+  def top_5_comment
+    comment.order(created_at: :desc).limit(5)
+  end
+
+  def increment_post_counter
+    author.increment!(:post_counter)
+  end
 end

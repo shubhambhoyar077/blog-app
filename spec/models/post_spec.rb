@@ -29,6 +29,11 @@ describe Post, type: :model do
     subject.likes_counter = -1
     expect(subject).to_not be_valid
   end
+  
+  it "post should increase user post counter by 1" do
+    #it will increase automatically after post save
+    expect(test_user.post_counter).to eq(1)
+  end
 
   it "post should return top 5 post" do
     test_post = Post.create(author: test_user, title: 'Hello', text: 'This is my first post')
@@ -46,4 +51,5 @@ describe Post, type: :model do
     expect(test_post.top_5_comment[3].text).to eq('This is my 2nd comment')
     expect(test_post.top_5_comment[4].text).to eq('This is my first comment')
   end
+
 end

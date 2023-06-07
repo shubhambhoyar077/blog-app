@@ -31,6 +31,11 @@ describe User, type: :model do
     Post.create(author: test_user, title: 'Hello', text: 'This is my second post')
     Post.create(author: test_user, title: 'Hello', text: 'This is my third post')
     Post.create(author: test_user, title: 'Hello', text: 'This is my fourth post')
+    
+    
+    expect(test_user.top_3_posts.size).to eq(3)
     expect(test_user.top_3_posts[0].text).to eq('This is my fourth post')
+    expect(test_user.top_3_posts[1].text).to eq('This is my third post')
+    expect(test_user.top_3_posts[2].text).to eq('This is my second post')
   end
 end

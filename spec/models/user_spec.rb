@@ -9,7 +9,6 @@ describe User, type: :model do
     expect(subject).to_not be_valid
   end
 
-  before {subject.save}
   it "Name should contan some char" do
     subject.name = '    '
     expect(subject).to_not be_valid

@@ -5,6 +5,7 @@ ruby '3.2.0'
 
 # Rspec for rails cmd: [bundle install, rails generate rspec:install]
 gem 'rspec-rails'
+gem 'rails-controller-testing'
 
 # Rubocop from microverse linter config.
 gem 'rubocop', '>= 1.0', '< 2.0'

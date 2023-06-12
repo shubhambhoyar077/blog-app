@@ -4,8 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.2.0'
 
 # Rspec for rails cmd: [bundle install, rails generate rspec:install]
-gem 'rspec-rails'
 gem 'rails-controller-testing'
+gem 'rspec-rails'
 
 # Rubocop from microverse linter config.
 gem 'rubocop', '>= 1.0', '< 2.0'

@@ -3,6 +3,7 @@
 <% @posts.each do |post|%>
 <li>
   <%= render 'shared/post', post: post%>
+  <%= render 'shared/comment', comments: post.comment%>
 </li>
 <%end%>
 </ul>

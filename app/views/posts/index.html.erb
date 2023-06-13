@@ -1,1 +1,8 @@
-<h1>User Posts List</h1>
+<%= render 'shared/user', user: @user%>
+<ul>
+<% @posts.each do |post|%>
+<li>
+  <%= render 'shared/post', post: post%>
+</li>
+<%end%>
+</ul>

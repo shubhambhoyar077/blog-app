@@ -1,0 +1,23 @@
+.user-card {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 3%;
+}
+.profile {
+  width: 150px;
+  height: 150px;
+}
+
+.user-card-body {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  border: 1px solid black;
+}
+
+.user-post-count {
+  align-self: flex-end;
+  margin-top: auto;
+}

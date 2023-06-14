@@ -7,6 +7,7 @@
 .profile {
   width: 150px;
   height: 150px;
+  border: 1px solid black;
 }
 
 .user-card-body {
@@ -24,4 +25,24 @@
 .user-post-count {
   align-self: flex-end;
   margin-top: auto;
+}
+
+.user-bio {
+  border: 1px solid black;
+  padding: 2%;
+}
+
+.user-card-post-ul {
+  margin-bottom: 3%;
+}
+
+.see-all-post-btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.see-all-post-btn {
+  padding: 5px 10px;
+  border: 2px solid black;
+  box-shadow: 4px 4px 4px black;
 }

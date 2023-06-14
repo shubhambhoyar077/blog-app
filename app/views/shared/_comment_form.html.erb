@@ -1,0 +1,5 @@
+<%= form_with model:([post, comment]) do |form|%>
+<%=form.label "Enter Comment:"%>
+<%=form.text_area :text%>
+<%=form.submit "Comment", class: 'common-btn'%>
+<%end%>

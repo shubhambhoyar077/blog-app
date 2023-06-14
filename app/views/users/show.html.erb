@@ -1,10 +1,10 @@
 <%= render 'shared/user', user: @user%>
-<div><%=@user.bio%></div>
-<ul>
+<div class='user-bio'><%=@user.bio%></div>
+<ul class='user-card-post-ul'>
 <%@user.top_3_posts.each do |post|%>
 <li>
   <%=render 'shared/post', post: post%>
 </li>
 <%end%>
 </ul>
-<%= link_to "See all posts", user_posts_path(@user) %>
+<div class='see-all-post-btn-container'><%= link_to "See all posts", user_posts_path(@user), class: 'see-all-post-btn' %></div>

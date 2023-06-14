@@ -6,3 +6,4 @@
   <div><%=@post.text%></div>
 </article>
   <%= render 'shared/comment', comments: @post.top_5_comment%>
+  <%= render 'shared/comment_form', post: @post, comment: @comment%>

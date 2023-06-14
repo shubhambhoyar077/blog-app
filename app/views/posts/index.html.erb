@@ -6,4 +6,5 @@
   <%= render 'shared/comment', comments: post.top_5_comment%>
 </li>
 <%end%>
+<li class='post-card'><%= 'No posts' if @posts.empty?%></li>
 </ul>

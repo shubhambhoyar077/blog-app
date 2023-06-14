@@ -6,5 +6,6 @@
   <%=render 'shared/post', post: post%>
 </li>
 <%end%>
+<li class='post-card'><%= 'No posts' if @user.top_3_posts.empty?%></li>
 </ul>
 <div class='see-all-post-btn-container'><%= link_to "See all posts", user_posts_path(@user), class: 'see-all-post-btn' %></div>

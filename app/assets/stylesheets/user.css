@@ -42,9 +42,22 @@
   display: flex;
   justify-content: center;
 }
-
-.see-all-post-btn {
+.post-btn-container {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 3%;
+}
+.see-all-post-btn,
+.common-btn {
   padding: 5px 10px;
   border: 2px solid black;
   box-shadow: 4px 4px 4px black;
+}
+
+.common-btn {
+  background-color: lightgreen;
+}
+
+.common-btn:hover {
+  background-color: green;
 }

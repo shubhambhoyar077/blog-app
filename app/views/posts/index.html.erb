@@ -1,10 +1,13 @@
 <%= render 'shared/user', user: @user%>
 <ul>
+<% if @posts.empty? %>
+  <p class='post-card-no-click'>No posts</p>
+<% else %>
 <% @posts.each do |post|%>
 <li>
   <%= render 'shared/post', post: post%>
   <%= render 'shared/comment', comments: post.top_5_comment%>
 </li>
 <%end%>
-<li class='post-card'><%= 'No posts' if @posts.empty?%></li>
+<%end%>
 </ul>

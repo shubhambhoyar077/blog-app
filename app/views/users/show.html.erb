@@ -1,7 +1,7 @@
 <%= render 'shared/user', user: @user%>
 <div><%=@user.bio%></div>
 <ul>
-<%@user.post.each do |post|%>
+<%@user.top_3_posts.each do |post|%>
 <li>
   <%=render 'shared/post', post: post%>
 </li>

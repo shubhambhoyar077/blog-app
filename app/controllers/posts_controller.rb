@@ -6,6 +6,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.where(author_id: params[:user_id], id: params[:id]).first
+    @comment = Comment.new
   end
 
   def new
@@ -15,7 +16,7 @@ class PostsController < ApplicationController
   def create
     @post = current_user.post.new(post_param)
     if @post.save
-      redirect_to @post
+      redirect_to user_post_path(current_user, post)
     else
       render :new, status: :unprocessable_entity
     end

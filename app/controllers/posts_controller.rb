@@ -13,6 +13,17 @@ class PostsController < ApplicationController
   end
 
   def create
+    @post = Post.new(author:current_user, post_param)
+    if @post.save
+      redirect @post
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
 
+  private
+  
+  def post_param
+    params.require(:post).permit(:title, :text)
   end
 end

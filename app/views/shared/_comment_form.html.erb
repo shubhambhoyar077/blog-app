@@ -1,5 +1,5 @@
-<%= form_with model:([post, comment]) do |form|%>
-<%=form.label "Enter Comment:"%>
-<%=form.text_area :text%>
+<%= form_with model:([post, comment]), html: { class: 'comment-form'} do |form|%>
+<%=form.label "Enter Comment", class: 'comment-field-label'%>
+<%=form.text_area :text, class: 'comment-field'%>
 <%=form.submit "Comment", class: 'common-btn'%>
 <%end%>

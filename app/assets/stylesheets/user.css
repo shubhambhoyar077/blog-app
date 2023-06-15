@@ -42,11 +42,13 @@
   display: flex;
   justify-content: center;
 }
+
 .post-btn-container {
   display: flex;
   justify-content: end;
   margin-bottom: 3%;
 }
+
 .see-all-post-btn,
 .common-btn {
   padding: 5px 10px;
@@ -61,6 +63,7 @@
 .common-btn:hover {
   background-color: green;
 }
+
 .user-wel {
   text-align: center;
 }

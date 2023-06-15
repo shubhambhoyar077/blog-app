@@ -3,3 +3,15 @@
   border: 1px solid black;
   padding: 2%;
 }
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.comment-field {
+  width: 15rem;
+  height: 2rem;
+}

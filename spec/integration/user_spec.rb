@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Users', type: :system do
-  describe 'index page' do
+  describe 'user index page' do
     before do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(User.create(name: 'Tom', photo: 'https://unsplash.com/photos', bio: 'Teacher from Mexico.'))
       @first_user = User.create(name: 'Shubham', photo: 'https://unsplash.com/photos', bio: 'Teacher from Mexico.')

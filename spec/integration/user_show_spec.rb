@@ -1,12 +1,9 @@
 require 'rails_helper'
 
-
 RSpec.describe 'Users', type: :system do
   describe 'user show page' do
     before do
-      # allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(User.create(name: 'Tom', photo: 'https://unsplash.com/photos', bio: 'Teacher from Mexico.'))
       @first_user = User.create(name: 'Shubham', photo: 'https://unsplash.com/photos', bio: 'Teacher from Mexico.')
-      # User.create(name: 'Enis', photo: 'https://unsplash.com/photos', bio: 'Teacher from Mexico.')
       @first_post = Post.create(author: @first_user, title: 'first', text: 'This is my first post')
       Post.create(author: @first_user, title: 'second', text: 'This is my second post')
       Post.create(author: @first_user, title: 'third', text: 'This is my third post')
@@ -19,7 +16,7 @@ RSpec.describe 'Users', type: :system do
       expect(page).to have_css("img[src='https://unsplash.com/photos']")
     end
     it 'I can see the number of posts the use has written.' do
-      expect(page).to have_content("Number of posts: 3")
+      expect(page).to have_content('Number of posts: 3')
     end
     it 'I can see the user bio.' do
       expect(page).to have_content(@first_user.bio)

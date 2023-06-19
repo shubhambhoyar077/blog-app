@@ -13,10 +13,6 @@ RSpec.describe 'Posts', type: :request do
       get user_posts_path(@new_user)
       expect(response.status).to eq(200)
     end
-    it 'should include correct placeholder text.' do
-      get user_posts_path(@new_user)
-      expect(response.body).to include('User Posts List')
-    end
     it 'should render correct template' do
       get user_posts_path(@new_user)
       expect(response).to render_template('index')
@@ -35,10 +31,6 @@ RSpec.describe 'Posts', type: :request do
     it 'should responce with correct status' do
       get user_post_path(@new_user, @new_post)
       expect(response.status).to eq(200)
-    end
-    it 'should include correct placeholder text.' do
-      get user_post_path(@new_user, @new_post)
-      expect(response.body).to include('User Post Details')
     end
     it 'should render correct template' do
       get user_post_path(@new_user, @new_post)

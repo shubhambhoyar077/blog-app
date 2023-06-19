@@ -116,6 +116,11 @@ You can deploy this project using: **Not available**.
 
 - GitHub: [@shubhambhoyar077](https://github.com/shubhambhoyar077)
 
+👤 **Enis Memic**
+
+- GitHub: [@enis-memic](https://github.com/enis-memic)
+- LinkedIn: [enis-memic](https://linkedin.com/in/enis-memic)
+
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>

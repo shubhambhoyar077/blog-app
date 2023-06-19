@@ -6,8 +6,8 @@ RSpec.describe 'Users', type: :system do
       allow_any_instance_of(ApplicationController)
         .to receive(:current_user)
         .and_return(User.create(name: 'Tom', photo: 'https://unsplash.com/photos', bio: 'Teacher from Mexico.'))
-      @first_user = User.create(name: 'Shubham', photo: 'https://unsplash.com/photos', bio: 'Teacher from Mexico.')
-      User.create(name: 'Enis', photo: 'https://unsplash.com/photos', bio: 'Teacher from Mexico.')
+      @first_user = User.create(name: 'Shubham', photo: 'https://randomuser.me/api/portraits/women/67.jpg', bio: 'Teacher from Mexico.')
+      User.create(name: 'Enis', photo: 'https://randomuser.me/api/portraits/women/70.jpg', bio: 'Teacher from Mexico.')
       visit root_path
     end
     it 'shows the right content' do
@@ -20,8 +20,8 @@ RSpec.describe 'Users', type: :system do
     end
     it 'I can see the profile picture for each user.' do
       expect(page).to have_css("img[src='https://unsplash.com/photos']")
-      expect(page).to have_css("img[src='https://unsplash.com/photos']")
-      expect(page).to have_css("img[src='https://unsplash.com/photos']")
+      expect(page).to have_css("img[src='https://randomuser.me/api/portraits/women/67.jpg']")
+      expect(page).to have_css("img[src='https://randomuser.me/api/portraits/women/70.jpg']")
     end
     it 'I can see the number of posts each user has written.' do
       Post.create(author: @first_user, title: 'Hello', text: 'This is my first post')

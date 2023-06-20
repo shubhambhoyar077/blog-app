@@ -11,6 +11,9 @@
   </head>
 
   <body>
+   <% if user_signed_in? %>
+    <%= render 'shared/header'%>
+    <%end%>
     <main>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>

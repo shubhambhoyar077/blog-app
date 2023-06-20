@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.2.0'
 
-#For registration and login of users.
+# For registration and login of users.
 gem 'devise'
 
 # Rspec for rails cmd: [bundle install, rails generate rspec:install]

@@ -1,0 +1,16 @@
+.devise-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.devise-container h2 {
+  margin-bottom: 3%;
+}
+
+.devise-form,
+.new_user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}

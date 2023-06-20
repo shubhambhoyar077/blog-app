@@ -1,0 +1,4 @@
+<header>
+<h1><%=current_user.name%></h1>
+<%= button_to "Logout", destroy_user_session_path, method: :delete %>
+</header>

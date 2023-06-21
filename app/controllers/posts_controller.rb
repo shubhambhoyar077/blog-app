@@ -24,8 +24,8 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @article = Post.find(params[:id])
-    @article.destroy
+    @post = Post.find(params[:id])
+    @post.destroy
 
     redirect_to root_path, status: :see_other
   end

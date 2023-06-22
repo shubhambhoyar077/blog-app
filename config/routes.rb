@@ -22,7 +22,7 @@ Rails.application.routes.draw do
       end
     end
     resources :posts, only: [] do
-      resources :comments, only: [:new, :create]
+      resources :comments, only: [:create]
     end
   end
 

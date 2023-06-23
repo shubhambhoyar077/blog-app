@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.2.0'
 
+# For APi test and doc
+gem 'rswag'
+
 # For authorization
 gem 'cancancan'
 

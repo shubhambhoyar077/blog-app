@@ -33,9 +33,9 @@ RSpec.describe 'api/comment', type: :request do
       parameter name: :comment, in: :body, schema: {
         type: :object,
         properties: {
-          text: { type: :string },
+          text: { type: :string }
         },
-        required: [ 'text' ]
+        required: ['text']
       }
 
       response '201', 'Comments created' do

@@ -85,7 +85,7 @@ Rails.application.configure do
     authentication: :plain,
     enable_starttls_auto: true
   }
-
+  #https://www.bogotobogo.com/RubyOnRails/RubyOnRails_Devise_Authentication_Sending_Confirmation_Email.php
   #How to setup ENV variable.
   # export SENDMAIL_PASSWORD=password
   # export SENDMAIL_USERNAME=KHongSanFrancisco@gmail.com
